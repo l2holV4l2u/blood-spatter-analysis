@@ -1,10 +1,19 @@
 {
   "version": 2,
+  "framework": "remix",
   "routes": [
     {
       "src": "/api/edgedetection",
-      "dest": "/api/index.py"
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": ".vercel/output/functions/server/index.mjs"
     }
   ],
-  "framework": "remix"
+  "build": {
+    "env": {
+      "NODE_VERSION": "18"
+    }
+  }
 }
