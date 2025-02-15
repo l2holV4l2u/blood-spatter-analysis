@@ -33,12 +33,6 @@ export default function Settings() {
 
   return (
     <div className="w-full flex rounded-lg justify-between items-center border-2 border-border p-4">
-      <Selector
-        title="Blood Motion"
-        choices={["Projectile", "Free fall", "Straight"]}
-        selectedChoice={motion}
-        setSelectedChoice={setMotion}
-      />
       <Tickbox
         title="Show Blood Motion"
         data={showTrajectory}
